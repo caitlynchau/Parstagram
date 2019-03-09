@@ -69,6 +69,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     
+    @IBAction func onTap(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
