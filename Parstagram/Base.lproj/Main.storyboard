@@ -138,13 +138,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="caitlynchau" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJK-A7-gJj">
-                                                    <rect key="frame" x="8" y="379" width="88" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="8" y="379" width="95.333333333333329" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXs-3V-Pre">
-                                                    <rect key="frame" x="104" y="379" width="282" height="20.333333333333314"/>
+                                                    <rect key="frame" x="111.33333333333334" y="379" width="274.66666666666663" height="20.333333333333314"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -201,7 +201,7 @@
                                 <rect key="frame" x="20" y="40" width="374" height="375"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="FE4-7P-Hit" appends="YES" id="IkI-Ym-IcL"/>
+                                    <outletCollection property="gestureRecognizers" destination="VHp-Ae-p7L" appends="YES" id="uD5-xp-L5F"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMZ-9K-e7w">
@@ -212,7 +212,7 @@
                                     <action selector="onSubmitButton:" destination="oIM-bD-qYR" eventType="touchUpInside" id="Qdf-mc-JpY"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter a caption" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Tj-3j-vm6">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Tj-3j-vm6">
                                 <rect key="frame" x="20" y="430" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -220,6 +220,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="4Tj-3j-vm6" firstAttribute="top" secondItem="LOG-kX-9MN" secondAttribute="bottom" constant="15" id="99F-9f-2oy"/>
                             <constraint firstItem="LOG-kX-9MN" firstAttribute="top" secondItem="tQd-Pr-cYz" secondAttribute="top" constant="20" id="ES0-V9-oL8"/>
@@ -229,6 +230,9 @@
                             <constraint firstItem="tQd-Pr-cYz" firstAttribute="trailing" secondItem="4Tj-3j-vm6" secondAttribute="trailing" constant="20" id="iYd-mH-6u9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tQd-Pr-cYz"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fYJ-Bf-kpy" appends="YES" id="OTY-KF-Lih"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="commentField" destination="4Tj-3j-vm6" id="YV0-YW-bi2"/>
@@ -236,9 +240,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWV-bi-bqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="FE4-7P-Hit">
+                <tapGestureRecognizer id="VHp-Ae-p7L" userLabel="Tap Camera Gesture Recognizer">
                     <connections>
-                        <action selector="onTap:" destination="oIM-bD-qYR" id="gGp-Hz-2u1"/>
+                        <action selector="onCameraButton:" destination="oIM-bD-qYR" id="EEY-P3-eCM"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="fYJ-Bf-kpy">
+                    <connections>
+                        <action selector="onTap:" destination="oIM-bD-qYR" id="TRS-QR-wCv"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

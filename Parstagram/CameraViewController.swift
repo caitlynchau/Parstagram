@@ -44,6 +44,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     
+    
     @IBAction func onCameraButton(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -51,12 +52,16 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             picker.sourceType = .camera
+            print("camera")
         }else{
             picker.sourceType = .photoLibrary
+            print("photo library")
         }
         
         present(picker, animated: true, completion: nil)
     }
+    
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as! UIImage
@@ -69,9 +74,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     
+    
     @IBAction func onTap(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        view.endEditing(true)
     }
+    
     
     /*
     // MARK: - Navigation
