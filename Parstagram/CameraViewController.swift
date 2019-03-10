@@ -61,6 +61,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         present(picker, animated: true, completion: nil)
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -72,6 +75,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         imageView.image = scaledImage
         dismiss(animated: true, completion: nil)
     }
+    
+    
     
     
     
